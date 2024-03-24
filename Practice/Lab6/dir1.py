@@ -7,8 +7,8 @@ def dirs(path):
 
 def files(path):
     lst = os.listdir(path)
-    result = [x for x in lst if os.path.isfile(path + '/' + x
-    )]
+    result = [x for x in lst if os.path.isfile(path + '/' + x)]
+
     print(result)
 
 def dirs_files(path):
