@@ -26,9 +26,9 @@ def get_callers(orderby, given_name, given_number):
     config  = load_config()
     command, part2, part3, part4 = "SELECT id, full_name, number FROM phonebook ", "", "", ""
     if given_name != 0:
-        part2 = f"(phonebook.full_name LIKE '{given_name}') "
+        part2 = f"(phonebook.full_name LIKE '%{given_name}%') "
     if given_number != 0:
-        part3 = f"(phonebook.number LIKE '{given_number}') "
+        part3 = f"(phonebook.number LIKE '%{given_number}%') "
     if orderby != 0:
         part4 = f"ORDER BY {orderby}"
     if part2 != "" or part3 != "":
